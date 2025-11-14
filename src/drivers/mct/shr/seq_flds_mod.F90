@@ -2576,6 +2576,14 @@ contains
 
     endif
 
+    call seq_flds_add(l2x_fluxes, "Fall_fn2o_lnd")
+    call seq_flds_add(x2a_fluxes, "Fall_fn2o_lnd")
+    longname = 'Surface flux of n2o from land'
+    stdname  = 'surface_upward_flux_of_n2o_from_land'
+    units    = 'gN m-2 s-1'
+    attname  = 'Fall_fn2o_lnd'
+    call metadata_set(attname, longname, stdname, units)
+
     if (flds_n2oc) then
 
        call seq_flds_add(a2x_states, "Sa_n2oprog")
